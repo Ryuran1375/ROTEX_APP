@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="/www/public/css/style.css">
+
+        <title>Sidebar</title>
+        <script>
+            function loadDatabaseStatus() {
+                fetch('db_connection.php')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('databaseStatus').innerText = data;
+                    });
+            }
+    
+            loadDatabaseStatus();
+            setInterval(loadDatabaseStatus, 5000); // Update the status every 5 seconds
+        </script>
+    </head>
+    <body>
+        <div class="menu">
+            <ion-icon name="menu-outline"></ion-icon>
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+    
+        <div class="barra-lateral">
+            <div>
+                <div class="nombre-pagina">
+                    <img src="/www/public/img/1.jpg" alt="Icono" width="32" height="32">
+                    <span>Rotex</span>
+                </div>
+                
+                <button class="boton" id="iniciar-sesion-boton">
+                    <ion-icon name="log-in-outline"></ion-icon>
+                    <span>Iniciar Sesion</span>
+                </button>
+
+                <button class="boton" id="boton-cambiar-nombre" onclick="mostrarFormularioCambiarNombre()">
+                    <ion-icon name="create-outline"></ion-icon>
+                    <span>Cambiar Nombre</span>
+                </button>
+
+                <button class="boton" id="cambiar-icono-boton" onclick="abrirExploradorArchivos()">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                    <span>Cambiar Icono</span>
+                </button>
+
+                <button class="boton" id="cerrar-sesion-boton">
+                    <ion-icon name="log-in-outline"></ion-icon>
+                    <span>Cerrar sesion</span>
+                </button>
+            </div>
+    
+            <nav class="navegacion">
+              
+            </nav>
+    
+            <div>
+                <div class="linea"></div>
+    
+                <div class="modo-oscuro">
+                    <div class="info">
+                        <ion-icon name="moon-outline"></ion-icon>
+                        <span>Drak Mode</span>
+                    </div>
+                    <div class="switch">
+                        <div class="base">
+                            <div class="circulo">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="usuario">
+                    <img src="/www/public/img/Jhampier.jpg" alt="" class="usuario-imagen">
+                    <div class="info-usuario">
+                        <div class="nombre-email">
+                            <span class="nombre">J</span>
+                            <span class="email">j@gmail.com</span>
+                        </div>
+                        <div class="menu-icon-container">
+                            <ion-icon name="ellipsis-vertical-outline" id="menu-icon" onclick="toggleMenu()"></ion-icon>
+                            
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+
+         
+        
+        <main>
+            <h1>Aplicaciones</h1>
+            <div></div>
+            <div id="menu-content"></div>
+
+            <iframe src="/www/views/menu.html" frameborder="0" width="100%" height="830"></iframe>
+        </main>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="/www/public/js/script.js"></script>
+        <script src="/www/public/iniciar y cerrar.js"></script>
+        <script src="/www/public/js/Cerrar_secion.js"></script>
+        <script src="/www/public/js/cambiar_nombre.js"></script>
+        <script src="/www/public/js/Cambiar Imagen.js"></script>
+        
+    </body>
+</html>

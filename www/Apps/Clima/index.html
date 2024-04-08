@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <title>Rotex Clima</title>
+    </head>
+
+    <body>
+        <div class="site-content">
+			<div class="site-header">
+				<div class="container">
+					<a href="index.html" class="branding">
+						<img src="img/images/logo.png" alt="" class="logo">
+						<div class="logo-type">
+							<h1 class="site-title">ROTEX</h1>
+							<small class="site-description">¡Adelante con nuestra app meteorológica!</small>
+						</div>
+					</a>
+
+					<!-- Default snippet for navigation -->
+					<div class="main-navigation">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i>Menu</button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="news.html">News</a></li>
+							<li class="menu-item"><a href="/www/Views/Menu.html">Menu</a></li>
+						</ul> <!-- .menu -->
+					</div> <!-- .main-navigation -->
+
+					<div class="mobile-navigation"></div>
+
+				</div>
+			</div> <!-- .site-header -->
+
+			<div class="hero" data-bg-image="img/images/banner1.jpg">
+				<div class="container">
+					<div class="current-info">
+						<div class="find-location">
+							<div class="time" id="time">
+								12:30 <span id="am-pm">PM</span>
+							</div>
+							<div class="date" id="date">
+								Lunes, 25 May
+							</div>
+							<div class="others" id="current-weather-items">	
+							</div>
+						</div>
+						<div class="place-container">
+							<div class="time-zone" id="time-zone">Asia/Kolkata</div>
+							<div id="country" class="country">IN</div>
+						</div>
+					</div>
+				</div>
+				<div class="future-forecast">
+					<div class="hero" data-bg-image="img/images/banner1.jpg">
+						<div class="today" id="current-temp">
+							<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+							<div class="other">
+								<div class="day">Lunes</div>
+								<div class="temp">Night - 25.6&#176; C</div>
+								<div class="temp">Day - 35.6&#176; C</div>
+							</div>
+						</div>
+						<div class="weather-forecast" id="weather-forecast">
+							<div class="weather-forecast-item">
+								<div class="day">Martes</div>
+								<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+								<div class="temp">Night - 25.6&#176; C</div>
+								<div class="temp">Day - 35.6&#176; C</div>
+							</div>
+							<div class="weather-forecast-item">
+								<div class="day">Miércoles</div>
+								<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+								<div class="temp">Night - 25.6&#176; C</div>
+								<div class="temp">Day - 35.6&#176; C</div>
+							</div>
+							<div class="weather-forecast-item">
+								<div class="day">Jueves</div>
+								<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+								<div class="temp">Night - 25.6&#176; C</div>
+								<div class="temp">Day - 35.6&#176; C</div>
+							</div>
+							<div class="weather-forecast-item">
+								<div class="day">Viernes</div>
+								<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+								<div class="temp">Night - 25.6&#176; C</div>
+								<div class="temp">Day - 35.6&#176; C</div>
+							</div>
+							<div class="weather-forecast-item">
+								<div class="day">Sabado</div>
+								<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+								<div class="temp">Night - 25.6&#176; C</div>
+								<div class="temp">Day - 35.6&#176; C</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="horizontal-section">
+				<div>
+				   <span>© 2012 — 2024 OpenWeather ® All rights reserved</span><br><br>
+				</div>
+				<div class="social">
+				   <a href="https://www.facebook.com/groups/270748973021342" target="_blank"><img
+						 src="img/images/facebook.png" alt="facebook icon"></a>
+				   <a href="https://twitter.com/OpenWeatherMap" target="_blank"><img
+						 src="img/images/x.png" alt="x icon"></a>
+				   <a href="https://www.linkedin.com/company/9816754" target="_blank"><img
+						 src="img/images/in.png" alt="linkedin icon "></a>
+				   <a href="https://t.me/openweathermap" target="_blank"><img
+						 src="img/images/telegram.png" alt="telegram icon"></a>
+				</div>
+			 </div>
+		    </div>
+		</div>
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/js/jquery-1.11.1.min.js"></script>
+		<script src="js/js/plugins.js"></script>
+		<script src="js/js/app.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/js/scripta.js"></script>
+    </body>
+</html>

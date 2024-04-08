@@ -1,0 +1,62 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+}
+
+.content {
+  padding: 20px;
+}
+
+.icon {
+  margin-bottom: 20px;
+}
+
+.icon img {
+  width: 50px; /* Tamaño deseado del icono */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+p{
+  color: black;
+}
+
+.mensaje{
+  color: black;
+}
+
+.loader {
+  width: 100px;
+  height: 20px;
+  background-color: #ddd;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+
+.loader::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: #4CAF50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loading 5s linear forwards;
+}
+
+@keyframes loading {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
